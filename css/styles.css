@@ -1,0 +1,847 @@
+/*
+Group 3
+File Name: styles.css
+Date: 4/10/22
+
+Main Colors 
+    Sapphire Blue #0065A4 
+    Powder Blue #A1D2CE 
+    Ash Gray #C9CEBD 
+    Jet #363535 
+Main Fonts: 
+    Source Code Pro
+*/
+
+
+/* ----TEMPLATE CSS---- */
+
+
+/* --MOBILE VIEWPORT STYLES */
+
+
+/* CSS Reset */
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h2,
+h3,
+h4,
+ol,
+ul,
+figure,
+figcaption,
+section,
+article,
+aside {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body and Image Styles */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.tablet-desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+body {
+  background-color: #363535;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* Header Styles */
+.logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Navigation Bar Styles */
+nav {
+  width: 100%;
+  background-color: #0065A4;
+  margin-bottom: 2%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  clear: left;
+  text-align: center;
+}
+
+.grid a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 2px solid #C9CEBD;
+  padding: 5%;
+  font-size: 1.4em;
+}
+
+.grid a:nth-child(4) {
+  border-right: 2px solid #C9CEBD
+}
+
+.grid a:nth-child(6) {
+  border-right: 2px solid #C9CEBD
+}
+
+#name {
+  font-weight: bold;
+  font-size: 1.75em;
+  text-decoration: none;
+  color: white;
+  grid-column: 1 / span 2;
+  padding: 2%;
+}
+
+/* Main Content Styles */
+main {
+  clear: both;
+}
+
+/* Footer Styles */
+footer {
+  clear: both;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* TEMPLATE MEDIA QUERIES */
+
+/* Tablet Viewport */
+@media screen and (min-width: 630px),
+print {
+
+  /* View Changes */
+  .tablet-desktop {
+    display: block;
+  }
+
+  .mobile,
+  .centered,
+  .desktop-logo {
+    display: none;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  /* Tablet Styles for Navigation Bar */
+  .grid a {
+    border: none;
+    display: inline-block;
+    font-size: 1.75em;
+    padding: 0 1%;
+    border-right: 2px solid #C9CEBD;
+    margin: 1% 0;
+  }
+
+  #name {
+    font-size: 2.5em;
+    display: block;
+    clear: right;
+    border-right: none;
+  }
+
+  .grid a:last-child {
+    border-right: none;
+  }
+
+  .grid img {
+    width: 10%;
+    float: left;
+    margin-left: 3%;
+  }
+
+  nav {
+    border-bottom: 2px solid #C9CEBD;
+  }
+
+  .hero {
+    display: none;
+  }
+}
+
+/* Desktop Viewport */
+@media screen and (min-width: 970px),
+print {
+  .desktop-logo {
+    display: block;
+  }
+  
+  .grid img {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 5%;
+  }
+
+  .grid {
+    text-align: right;
+  }
+
+  #name {
+    display: none;
+  }
+
+  .grid a {
+    border: none;
+    font-size: 2em;
+    padding-right: 1%;
+    margin-top: 2%;
+  }
+
+  .grid a:nth-child(4),
+  .grid a:nth-child(6) {
+    border-right: none;
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+  }
+
+  #parallelogram h1:hover {
+    color: #0375bc;
+  }
+
+  #parallelogram {
+    width: 500px;
+    height: 100px;
+    transform: skew(20deg);
+    background: #C9CEBD;
+    border: 2px solid #0065A4;
+    box-shadow: 4px 4px 10px black;
+  }
+
+  #parallelogram h1 {
+    font-size: 2.5em;
+    color: #0065A4;
+    transform: skew(-20deg);
+    text-align: center;
+    padding: 5% 0;
+    font-weight: bold;
+  }
+
+  #parallelogram a {
+    text-decoration: none;
+  }
+
+  .centered {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 17%;
+  }
+
+  nav {
+    margin-bottom: 0;
+    padding-bottom: 0.5%;
+
+  }
+
+  header {
+    margin-bottom: 2%;
+  }
+
+  .grid a:hover {
+    color: #C9CEBD;
+  }
+}
+
+/* Medium Desktop Viewports */
+@media screen and (min-width: 1400px),
+print {}
+
+/* Large Desktop Viewports */
+@media screen and (min-width: 2561px),
+print {
+  #container {
+    width: 2560px;
+    margin: 0 auto;
+  }
+}
+
+/* Print Viewport */
+@media print {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* END OF TEMPLATE MEDIA QUERIES */
+
+
+
+
+/* INDIVIDUAL CSS FOR PAGES */
+
+/* ~~~~index.html Styles~~~~ */
+.large-buttons {
+  max-width: 300px;
+  margin: 3% auto;
+  background-color: #C9CEBD;
+  position: relative;
+  background-color: #363535;
+}
+
+.large-buttons img,
+.sub-text {
+  border-radius: 10px;
+}
+
+.large-buttons figcaption {
+  text-align: center;
+  color: #0065A4;
+  font-size: 1.5em;
+}
+
+.sub-text {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 1%;
+}
+
+.intro-message {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #0065A4;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.intro-message {
+  padding: 0.5%;
+}
+
+/* Desktop Style Changes for index.html */
+@media screen and (min-width: 970px),
+print {
+  #index-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+  }
+
+  #index-grid .sub-text {
+    font-size: 2em;
+  }
+
+  .intro-message {
+    font-size: 1.25em;
+  }
+
+  .large-buttons:hover {
+    transform: translateY(10px);
+  }
+}
+
+/* Medium Desktop Style Changes for index.html */
+@media screen and (min-width: 1400px),
+print {
+  div .large-buttons {
+    max-width: 400px;
+  }
+
+  #index-grid .sub-text {
+    font-size: 2.5em;
+    ;
+  }
+
+  .centered {
+    top: 22%;
+  }
+}
+
+/* ~~~~about.html Styles~~~~ */
+#about h1 {
+  text-align: center;
+  font-size: 2.5em;
+  padding-bottom: 2%;
+}
+
+#about {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about section {
+  border: 4px solid black;
+  background-color: #0065A4;
+  border-radius: 10px;
+  margin-bottom: 4%;
+  padding: 1%;
+}
+
+.about-links h3 {
+  padding: 3% 0;
+}
+
+.about-links a {
+  text-decoration: none;
+  color: #A1D2CE;
+}
+
+.about-links a {
+  font-size: 1.1em;
+}
+
+/* Desktop Style Changes for about.html */
+@media screen and (min-width: 970px),
+print {
+  #about p {
+    font-size: 1.25em;
+  }
+
+  #about h2 {
+    font-size: 2em;
+  }
+
+  #about h3 {
+    font-size: 1.5em;
+  }
+
+  .about-links a {
+    color: #2afaef;
+  }
+}
+
+/* ~~~~calendar.html Styles~~~~ */
+.calander h2 {
+  text-align: center;
+  margin: 2% 0 4% 0;
+  font-size: 1.75em;
+}
+
+.calander section h3 {
+  text-align: center;
+}
+
+.calander {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.calander section {
+  padding-bottom: 4%;
+}
+
+#fall22 {
+  width: 90%;
+  margin: 2% auto;
+  text-align: center;
+}
+
+#fall22 h3 {
+  font-size: 1.75em;
+  padding-bottom: 1%;
+}
+
+#fall22 ul {
+  border: 3px solid #0065A4;
+  margin-top: 1%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#fall22 li {
+  list-style-type: none;
+  padding: 2% 1%;
+  font-size: 1.25em;
+}
+
+/* Tablet Viewport Changes for calander.html */
+@media screen and (min-width: 630px),
+print {
+  .big-calander caption {
+    font-size: 2.5em;
+    margin: 1% 0;
+  }
+
+  .big-calander table {
+    border-collapse: collapse;
+    border: 3px solid #0065A4;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .big-calander th,
+  td {
+    border: 3px solid #0065A4;
+    padding: 1%;
+    text-align: center;
+  }
+
+  #week,
+  #date {
+    width: 10%;
+  }
+
+  .big-calander tr:nth-child(odd) {
+    background-color: #4d4b4b;
+  }
+
+  .big-calander tr:first-child {
+    background-color: #8c8d8a;
+    color: black;
+    font-size: 1.15em;
+  }
+
+  #fall22 ul li {
+    font-size: 1.5em;
+  }
+}
+
+/* ~~~~contact.html Styles~~~~ */
+
+/* ~~~~web_form.html Styles~~~~ */
+
+#form {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+#words {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#words a {
+  color: #0065A4;
+  text-decoration: none;
+}
+
+#discord {
+  max-width: 90%;
+}
+
+#webform_footer {
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#fname {
+  height: 2.5em;
+  font-size: 12pt;
+}
+
+#lname {
+  height: 2.5em;
+  font-size: 12pt;
+}
+
+#email {
+  height: 2.5em;
+  font-size: 12pt;
+}
+
+#submit {
+  width: 15em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 1em;
+}
+
+#grade {
+  width: 15em;
+  height: 2.5em;
+  border: none;
+}
+
+#submit:hover {
+  background-color: #807e7e;
+}
+
+#form_title {
+  font-size: 16pt;
+}
+
+#message_form {
+  font-size: 16pt;
+}
+
+
+/* Desktop Viewport Changes for web_form.html */
+@media screen and (min-width: 970px) {
+
+  #comments {
+    height: 10em;
+    width: 55em;
+  }
+
+}
+
+/* Tablet Viewport Changes for contact.html */
+@media screen and (min-width: 630px),
+print {
+  #words {
+    font-size: 1.25em;
+  }
+}
+
+/* Desktop Style Changes for contact.html */
+@media screen and (min-width: 970px),
+print {
+  #words {
+    font-size: 1.5em;
+  }
+}
+
+/* ~~~~resources.html Styles~~~~ */
+.big-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 5%;
+}
+
+.resource h2 {
+  text-align: center;
+}
+
+.resource {
+  padding: 5% 0;
+}
+
+.rec-dec {
+  text-align: center;
+}
+
+.project-link {
+  width: 70%;
+  margin: 3% auto;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid black;
+  background-color: #0065A4;
+  border-radius: 10px;
+}
+
+.project-link a {
+  text-decoration: none;
+  color: #2afaef;
+}
+
+/* Tablet Viewport changes for resources.html */
+@media screen and (min-width: 630px), print {
+  .resource {
+    padding: 2% 0;
+  }
+
+  .rec-dec {
+    font-size: 1.5em;
+  }
+
+  .resource h2 {
+    font-size: 2em;
+  }
+}
+
+/* Desktop Style Changes for resources.html */
+@media screen and (min-width: 970px),
+print {
+  .resources {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1%;
+  }
+
+}
+
+/* ~~~~project.html Styles~~~~ */
+.project {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project img {
+  margin: 0 auto;
+}
+
+.resource a  {
+  text-decoration: none;
+  color: #A1D2CE;
+}
+
+.resource h1 {
+  font-size: 2.25em;
+}
+
+/* Desktop Style Changes for project.html */
+@media screen and (min-width: 970px),
+print {
+  .resource p {
+    font-size: 1.5em;
+  }
+}
+
+/* ~~~~companies_people.html Styles~~~~ */
+
+.grid2 {
+  padding: 3%;
+  padding-top: 0;
+  padding-bottom: 5%;
+  text-align: center;
+  margin: auto;
+}
+
+.grid2 a {
+  margin: 0 auto;
+  color: #2afaef;
+}
+
+.grid2 aside {
+  text-align: center;
+}
+
+.grid2 figure a img {
+  margin: auto;
+  border: 1px solid #C9CEBD;
+  border-radius: 8px;
+}
+
+.grid2 article a img {
+  margin: auto;
+  border: 1px solid #C9CEBD;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.grid2 h2 {
+  font-size: 2.5em;
+}
+
+.grid2 figure {
+  text-align: center;
+
+  padding: 3%;
+}
+
+.grid2 p {
+  border: 1px solid #C9CEBD;
+
+  background-color: #0065A4;
+
+  border-radius: 8px;
+
+  padding: 2%;
+}
+
+/* Tablet Viewport Changes for companies_people.html */
+@media screen and (min-width: 630px),
+print {
+  .grid2 {
+    display: grid;
+    padding-bottom: 2%;
+    grid-gap: 2%;
+
+  }
+
+  .grid2 aside {
+    text-align: center;
+  }
+
+  .grid2 h2 {
+    font-size: 2em;
+  }
+
+  .grid2 figure {
+    padding: 3%;
+  }
+
+  .gridtop {
+    grid-column: 1 / span 3;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+/* Desktop Viewport Changes for companies_people.html */
+@media screen and (min-width: 970px),
+print {
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2%;
+    justify-content: center;
+  }
+
+  .grid2 img {
+    max-width: 100%;
+  }
+
+  .gridtop {
+    grid-column: 1 / span 3;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .grid2 p {
+    font-size: 1.15em;
+  }
+
+  .grid2 figcaption {
+    font-size: 1.5em;
+  }
+}
+
+/* Medium Desktop Viewport Changes for companies_people.html */
+@media screen and (min-width: 1400px),
+print {
+  .grid2 {
+    grid-template-columns: auto auto auto;
+
+  }
+
+  .gridtop {
+    grid-column: 1 / span 3;
+  }
+
+  .gridbottom {
+    grid-column: 3 / span 1;
+  }
+}
+
+/* ~~~~companies.html Styles~~~~ */
+
+
+/* ~~~~people.html Styles~~~~ */
+
+/* END OF CSS FOR INDIVIDUAL PAGES */
